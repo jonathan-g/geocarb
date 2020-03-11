@@ -18,13 +18,13 @@ Depends:
   R (>= 3.6)
 Imports:
     reticulate (>= 1.14),
-    dplyr (>= 0.8.4),
-    stringr (>= 1.4.0),
+    dplyr (>= 0.8),
+    stringr (>= 1.4),
     scales,
     xml2,
     tidyr,
-    purrr (>= 0.3.3),
+    purrr (>= 0.3),
     magrittr (>= 1.5),
     readr,
-    utils (>= 3.6.3)
+    utils (>= 3.6)
 RoxygenNote: 7.0.2
