@@ -124,4 +124,6 @@ run_geocarb = function(filename,
   geocarb_module$save(gc, filename)
 
   names(gc) <- .geocarb$column_names[names(gc)]
+  gc <- dplyr::as_tibble(gc)
+  invisible(gc)
 }

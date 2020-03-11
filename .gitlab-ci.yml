@@ -9,6 +9,7 @@ building:
   stage: build
   script:
     - R -e "remotes::install_deps(dependencies = TRUE)"
+    - R -e 'install.packages("reticulate")'
     - R -e "reticulate::install_miniconda()"
     - R -e 'devtools::check()'
 
@@ -26,6 +27,8 @@ testing:
         - master
     script:
         - Rscript -e 'install.packages("DT")'
+        - Rscript -e 'install.packages("reticulate")'
+        - Rscript -e 'reticulate::install_miniconda()'
         - Rscript -e 'covr::gitlab(quiet = FALSE)'
     artifacts:
         paths:

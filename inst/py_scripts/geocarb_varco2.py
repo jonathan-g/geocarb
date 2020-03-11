@@ -281,7 +281,7 @@ def geocarb(co2_slug = (0, 1000, 0), co2_degas = 7.5,
     np = len(duration) # number of periods. Default = 2: a 5-million year spinup and then a 2 million year experimental run.
 
     if type(co2_slug) in (int, float):
-        co2_slug = [co2_slug] * np
+        co2_slug = [co2_slug] * np    
     if type(co2_degas) in (int, float):
         co2_degas = [co2_degas] * np
     if type(timestep) in (int, float):
@@ -301,6 +301,9 @@ def geocarb(co2_slug = (0, 1000, 0), co2_degas = 7.5,
     # where x is the CO2 release in gigatons.
     #
     co2_slug = list(map(lambda x : x * 1E+3/12., co2_slug)) # Convert GTon C to 10^12 moles
+    if len(co2_slug) < np:
+        co2_slug = co2_slug + [0] * (np - len(co2_slug))
+    co2_slug[np - 1] = 0
 
     n_steps = list(map(lambda i : int(duration[i] / timestep[i]), range(np)))
 
