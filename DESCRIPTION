@@ -33,3 +33,5 @@ Imports:
     readr,
     utils (>= 3.6)
 RoxygenNote: 7.0.2
+Suggests: 
+    covr
