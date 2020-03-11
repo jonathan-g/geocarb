@@ -11,3 +11,4 @@ deploy:
   script: Rscript -e 'pkgdown::deploy_site_github()'
   skip_cleanup: true
 after_failure: "cat /home/travis/build/jonathan-g/geocarb/geocarb.Rcheck/00install.out"
+
