@@ -1,0 +1,11 @@
+destination: docs
+
+home:
+  title: Simulate the geochemical carbon cycle.
+  description: >
+    Runs a simulation of the geochemical carbon cycle, allowing changes in
+    natural and anthropogenic emission of carbon dioxide.
+  strip_header: false
+
+development:
+  mode: auto

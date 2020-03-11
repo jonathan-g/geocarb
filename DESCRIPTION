@@ -1,6 +1,7 @@
 Package: geocarb
 Title: Simulates the geochemical carbon cycle using the GEOCARB model
 Version: 0.1.0.9000
+Date: 2020-03-11
 Authors@R: 
     person(given = c("Jonathan", "M."),
            family = "Gilligan",
@@ -12,8 +13,12 @@ Description: This package uses a modifier version of the GEOCARB model by
   python and further modified by Jonathan Gilligan.
 License: MIT + file LICENSE
 Encoding: UTF-8
+Language: en-US
 LazyData: true
 Roxygen: list(markdown = TRUE)
+URL: https://jonathan-g.github.io/geocarb/,
+     https://github.com/jonathan-g/geocarb
+BugReports: https://github.com/jonathan-g/geocarb/issues
 Depends:
   R (>= 3.6)
 Imports:

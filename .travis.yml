@@ -1,6 +1,13 @@
 # R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
 
 language: R
+sudo: false
 python:
   - "3.6"
+before_cache: Rscript -e 'remotes::install_cran("pkgdown")'
 cache: packages
+deploy:
+  provider: script
+  script: Rscript -e 'pkgdown::deploy_site_github()'
+  skip_cleanup: true
+after_failure: "cat /home/travis/build/jonathan-g/geocarb/geocarb.Rcheck/00install.out"

@@ -8,6 +8,11 @@
 .RData
 .Ruserdata
 
+# RMarkdown detritus
+README_cache/
+/multi_spike.dat
+/alt_degassing.dat
+
 # python cruft
 *.py[cod]
 __pycache__/
@@ -26,3 +31,4 @@ __pycache__/
 *.toc
 
 *.synctex.gz
+docs/

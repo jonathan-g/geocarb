@@ -24,7 +24,7 @@
 #'   spinup.
 #' @param time_steps A vector with the number of years per time step in each
 #'   period. If a single number is given, it will be applied to each period.
-#' @param degas The volcanic degassing rate, in trillions of molecules per year.
+#' @param degas The volcanic degassing rate, in trillions of moles per year.
 #'   Either a vector with the value for each period, or a single number that
 #'   will be applied to all periods.
 #' @param plants A logical variable indicating whether or not there are
@@ -47,14 +47,14 @@
 #'   * `co2.atmos`: The concentration of CO2 in the atmosphere, in parts per
 #'      million.
 #'   * `silicate.weathering`: The rate of SiO2 being weathered from rocks and
-#'     moved to the oceans, in trillions of molecules per year.
+#'     moved to the oceans, in trillions of moles per year.
 #'   * `carbonate.weathering`: The rate of carbonate weathered from carbonate
-#'      rocks and moved to the ocean, in trillions of molecules per year.
+#'      rocks and moved to the ocean, in trillions of moles per year.
 #'   * `total.weathering`: Total weathering of carbonate and silicate, in
-#'     trillions of molecules per year.
+#'     trillions of moles per year.
 #'   * `carbon.burial`: The rate at which carbonate is being converted to
 #'      minerals (e.g., limestone) and buried on the ocean floor, in trillions
-#'      of molecules per year.
+#'      of moles per year.
 #'   * `co2.total`: Total CO2 dissolved in the ocean. This is the sum of all
 #'      forms of CO2:
 #'      \ifelse{html}{\out{
@@ -81,9 +81,9 @@
 #'     (\ifelse{html}{\out{CO<sub>3</sub><sup>-2</sup>}}{\eqn{\mathrm{CO}_3^{-2}}{CO3--}})
 #'     in the ocean, in micromoles per kg seawater.
 #'   * `degassing.rate`: The rate at which CO2 is emitted by natural degassing
-#'     (e.g., volcanoes), in trillions of molecules per year.
+#'     (e.g., volcanoes), in trillions of moles per year.
 #'   * `emissions`: The rate at which CO2 is emitted by human activities
-#'     (e.g., burning fossil fuels), in trillions of molecules per year.
+#'     (e.g., burning fossil fuels), in trillions of moles per year.
 #'   * `temp.atmos`: The temperature of the atmosphere, in degrees Celsius.
 #'   * `temp.ocean`: The temperature of the ocean surface, in degrees Celsius.
 #'
@@ -94,6 +94,36 @@
 #'                   periods = c(5E6, 100, 2E6),
 #'                   time_steps = c(50, 1, 50),
 #'                   degas = 7.5)
+#'
+#'  # Run GEOCARB with multiple spikes of CO2
+#'  # Spin up for 5 million years to initialize the model
+#'  # Then five spikes of CO2 every 10,000 years
+#'  # Then 2 million years after the last spike.
+#'  #
+#'  # Since spikes happen at the end of a period, note
+#'  # that there are six periods but only five spikes.
+#'  #
+#'  periods <- c( 5E6,  1E4,  1E4,  1E4,  1E4, 2E6)
+#'  spikes <-  c(1000, 1000, 1000, 1000, 1000)
+#'  run_geocarb("multi_spike.dat", periods = periods, co2_spike = spikes)
+#'  multi_spike <- read_geocarb("multi_spike.dat")
+#'
+#'  # Run GEOCARB with pulses of sustained degassing
+#'  # Spin up for 5 million years to initialize the model
+#'  # Then five periods of 100,000 years with alternating
+#'  # normal and heightened volcanic degassing
+#'  # Then 2 million years after the last period.
+#'  #
+#'  # This also shows that you can get the data directly
+#'  # from run_geocarb without needing to read it from a
+#'  # file.
+#'  periods <- c(5E6, 1E5, 1E5, 1E5, 1E5, 1E5, 2E6)
+#'  degas <-   c(7.5, 9.5, 7.5, 9.5, 7.5, 9.5, 7.5)
+#'
+#'  alt_degassing <- run_geocarb(NULL, periods = periods,
+#'                               co2_spike = 0, degas = degas)
+#'
+#'
 #' }
 #'
 #'@export

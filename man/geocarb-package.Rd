@@ -10,6 +10,15 @@ This package uses a modifier version of the GEOCARB model by
   Robert Berner, as modified by David Archer and then translated into 
   python and further modified by Jonathan Gilligan.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://jonathan-g.github.io/geocarb/}
+  \item \url{https://github.com/jonathan-g/geocarb}
+  \item Report bugs at \url{https://github.com/jonathan-g/geocarb/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Jonathan M. Gilligan \email{jonathan.gilligan@vanderbilt.edu} (\href{https://orcid.org/0000-0003-1375-6686}{ORCID})
 

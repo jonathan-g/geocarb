@@ -7,4 +7,10 @@
 __pycache__/.*$
 ^\.travis\.yml$
 ^README\.Rmd$
+^README_cache/
+^multi_spike.dat$
+^alt_degassing.dat$
 ^\.gitlab-ci\.yml$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
