@@ -5,3 +5,4 @@
 \.spyproject
 \.py[cod]$
 __pycache__/.*$
+^\.travis\.yml$
