@@ -1,5 +1,3 @@
-destination: docs
-
 home:
   title: Simulate the geochemical carbon cycle.
   description: >
@@ -8,4 +6,4 @@ home:
   strip_header: false
 
 development:
-  mode: auto
+  mode: release
