@@ -11,3 +11,18 @@
 # python cruft
 *.py[cod]
 __pycache__/
+
+# LaTeX stuff
+*.aux
+*.bak
+*.blg
+*.glo
+*.gls
+*.ilg
+*.lof
+*.log
+*.lot
+*.out
+*.toc
+
+*.synctex.gz

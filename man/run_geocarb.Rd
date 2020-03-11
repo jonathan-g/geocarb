@@ -84,10 +84,10 @@ forms of CO2:
         [H<sub>2</sub>CO<sub>3</sub>] +
         [HCO<sub>3</sub><sup>-</sup>] +
         [CO<sub>3</sub><sup>-2</sup>]}}{\deqn{
-        \left[CO_{2}\right] +
-        \left[H_{2}CO_{3}\right] +
-        \left[HCO_{3}^{-}\right] +
-        \left[CO_{3}^{-2}\right]
+        \left[\mathrm{CO}_{2}\right] +
+        \left[\mathrm{H}_{2}\mathrm{CO}_{3}\right] +
+        \left[\mathrm{HCO}_{3}^{-}\right] +
+        \left[\mathrm{CO}_{3}^{-2}\right]
         }{CO2 + carbonic acid (H2CO2) + bicarbonate (HCO3-) +
           carbonate (CO3--)}},
 in moles per cubic meter.
@@ -96,11 +96,11 @@ necessary to neutralize the carbonate and bicarbonate in the ocean. The
 detailed definition is complicated, but to a good approximation,
 \ifelse{html}{\out{alk = [HCO<sub>3</sub><sup>-</sup>] +
       2[CO<sub>3</sub><sup>-2</sup>]}}{\deqn{
-        \text{alk} = \left[HCO_3^{-}\right] + 2 \left[CO_3^{-2}\right]
+        \mbox{alk} = \left[\mathrm{HCO}_3^{-}\right] + 2 \left[\mathrm{CO}_3^{-2}\right]
       }{alk = [HCO3-] + 2 [CO3--]}}.
 This is measured in moles per cubic meter.
 \item \code{carbonate.ocean}: The concentration of dissolved carbonate
-(\ifelse{html}{\out{CO<sub>3</sub><sup>-2</sup>}}{\eqn{\text{CO}_3^{-2}}{CO3--}})
+(\ifelse{html}{\out{CO<sub>3</sub><sup>-2</sup>}}{\eqn{\mathrm{CO}_3^{-2}}{CO3--}})
 in the ocean, in micromoles per kg seawater.
 \item \code{degassing.rate}: The rate at which CO2 is emitted by natural degassing
 (e.g., volcanoes), in trillions of molecules per year.
