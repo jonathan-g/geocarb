@@ -3,4 +3,4 @@
 language: R
 cache: packages
 before_install:
-  - pip install numpy pandas
+  - pip3 install numpy pandas
