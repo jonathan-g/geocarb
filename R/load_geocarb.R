@@ -8,6 +8,7 @@ get_py_geocarb_path <- function() {
 #' Check that a reasonable version of python is installed.
 #'
 #' @return Logical indicating success.
+#' @keywords internal
 #'
 check_dependencies <- function() {
   reticulate::use_miniconda()

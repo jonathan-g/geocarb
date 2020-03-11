@@ -12,3 +12,4 @@ Logical indicating success.
 \description{
 Check that a reasonable version of python is installed.
 }
+\keyword{internal}
