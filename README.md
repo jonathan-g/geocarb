@@ -125,7 +125,7 @@ multi_spike %>% filter(year <= 5E4) %>%
 periods = c(5E6, 1E5, 1E5, 1E5, 1E5, 1E5, 2E6)
 degas =   c(7.5, 9.5, 7.5, 9.5, 7.5, 9.5, 7.5)
 
-alt_degassing = run_geocarb("alt_degassing.dat", periods = periods, 
+alt_degassing = run_geocarb(NULL, periods = periods, 
                             co2_spike = 0, degas = degas)
 ```
 
