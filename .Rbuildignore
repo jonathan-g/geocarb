@@ -1,0 +1,7 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^LICENSE\.md$
+^LICENCE$
+\.spyproject
+\.py[cod]$
+__pycache__/.*$

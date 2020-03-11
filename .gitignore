@@ -1,0 +1,13 @@
+# RStudio project files
+#
+.Rproj.user/
+*.Rproj
+
+# R transient files
+.Rhistory
+.RData
+.Ruserdata
+
+# python cruft
+*.py[cod]
+__pycache__/
