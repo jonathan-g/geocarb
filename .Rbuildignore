@@ -6,3 +6,5 @@
 \.py[cod]$
 __pycache__/.*$
 ^\.travis\.yml$
+^README\.Rmd$
+^\.gitlab-ci\.yml$
