@@ -24,7 +24,6 @@ theme_set(theme_bw())
 <!-- badges: start -->
 [![Travis build status](https://travis-ci.org/jonathan-g/geocarb.svg?branch=master)](https://travis-ci.org/jonathan-g/geocarb)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Codecov test coverage](https://codecov.io/gh/jonathan-g/geocarb/branch/master/graph/badge.svg)](https://codecov.io/gh/jonathan-g/geocarb?branch=master)
 [![R build status](https://github.com/jonathan-g/geocarb/workflows/R-CMD-check/badge.svg)](https://github.com/jonathan-g/geocarb/actions)
 <!-- badges: end -->
 
